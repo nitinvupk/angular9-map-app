@@ -1,0 +1,14 @@
+<h4>Place Detail</h4>
+<div class="row">
+    <div class="col-md-3">
+        <div class="card">
+            <div class="form-group w-100 position-absolute autocomplete-search">
+                <app-autocomplete [address]="data?.formatted_address"></app-autocomplete>
+            </div>
+            <img class="card-img-top" [src]="bgImage" alt="place image">
+            <div class="card-body">
+                <h5 class="card-title">{{data?.formatted_address}}</h5>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+.autocomplete-search {
+    z-index: 999;
+    top:0;
+}
+
+agm-map {
+    height: 600px;
+}

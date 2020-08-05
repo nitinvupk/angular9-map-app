@@ -1,0 +1,7 @@
+.autocomplete-search {
+    z-index: 999;
+    top:0;
+}
+app-autocomplete {
+    pointer-events: none;
+}

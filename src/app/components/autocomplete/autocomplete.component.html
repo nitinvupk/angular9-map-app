@@ -1,0 +1,14 @@
+<form novalidate>
+    <div class="control">
+      <input class="form-control" type="text" name="addressInput" [(ngModel)]="addressInput" 
+        placeholder="Type an address" autocomplete="off" (keyup) = "keyUpHandler()">
+    </div>
+  </form>
+
+  <div class="panel" *ngIf = "predictions">
+    <ul class="list-group">
+      <li class="list-group-item p-2" *ngFor = "let prediction of predictions">
+        <a class="text-black" [routerLink]="['place-detail', prediction.place_id]" (mouseover)="fireEvent(prediction)"> {{prediction.description}}</a>
+      </li>
+    </ul>
+  </div>

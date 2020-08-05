@@ -1,0 +1,15 @@
+<div class="row mt-3">
+    <div class="col-md-12">
+        <div class="form-group w-25 position-absolute autocomplete-search">
+            <app-autocomplete (giveBack)="takeItAllIn($event)" (activeMarker)="activeMarker($event)">
+            </app-autocomplete>
+        </div>
+        <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
+            <agm-marker  [style.background-color]="isActive ? 'green': ''" *ngFor="let latlong of latlongs" [latitude]="latlong.latitude" [longitude]="latlong.longitude">
+                <agm-info-window>
+                    <div>{{latlong.place_name}}</div>
+                </agm-info-window>
+            </agm-marker>
+        </agm-map>
+    </div>
+</div>
